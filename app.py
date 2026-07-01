@@ -5,13 +5,14 @@ import joblib
 model = joblib.load(r"models\model_rfr.lb")
 app = Flask(__name__)
 @app.route('/')    #@means decorator means we are redefining  , / means home root 
-def home():
-    return "hello hiiii"
+# def home():
+#     return "hello hiiii"
 # @app.route('/bio')
 # def intro():
 #     return "hello my name is ritika"
 
-@app.route('/index')  # / k aage kuch likhne ka mtlb root k aage is path pr to agr hme yh run krna h to url m aage /krke likhna pdega***/=
+# @app.route('/index')  # / k aage kuch likhne ka mtlb root k aage is path pr to agr hme yh run krna h to url m aage /krke likhna pdega***/=
+@app.route('/')
 def index():
     return render_template('index.html')
 
@@ -26,9 +27,9 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route('/project')
-def project():
-    return render_template('project.html')
+# @app.route('/project')
+# def project():
+#     return render_template('project.html')
 
 
 @app.route("/project", methods = {'GET',"POST"})

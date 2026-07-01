@@ -3,3 +3,5 @@ pandas
 flask
 joblib
 scikit-learn
+matplotlib
+seaborn
